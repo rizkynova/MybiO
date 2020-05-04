@@ -1,4 +1,4 @@
-package com.rizkynova.mybio;
+package com.rizkynova.mybio.ClassPendukung;
 
 /*
 Nama  : Rizky Novayandi

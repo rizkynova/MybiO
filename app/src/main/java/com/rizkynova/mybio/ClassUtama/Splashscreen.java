@@ -1,4 +1,4 @@
-package com.rizkynova.mybio;
+package com.rizkynova.mybio.ClassUtama;
 
 /*
 Nama  : Rizky Novayandi
@@ -14,6 +14,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ProgressBar;
+
+import com.rizkynova.mybio.ClassPendukung.ProgressBarAnimation;
+import com.rizkynova.mybio.R;
 
 public class Splashscreen extends AppCompatActivity {
 
