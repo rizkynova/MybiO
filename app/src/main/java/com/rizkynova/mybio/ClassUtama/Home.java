@@ -32,6 +32,18 @@ public class Home extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),DailyActivity.class));
                         overridePendingTransition(0,0);
                         return true;
+                    case R.id.nav_gallery:
+                        startActivity(new Intent(getApplicationContext(),Gallery.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.nav_music:
+                        startActivity(new Intent(getApplicationContext(),Music.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.nav_profile:
+                        startActivity(new Intent(getApplicationContext(),Profile.class));
+                        overridePendingTransition(0,0);
+                        return true;
                 }
                 return false;
             }
