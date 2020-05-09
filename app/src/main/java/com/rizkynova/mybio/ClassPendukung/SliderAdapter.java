@@ -24,7 +24,7 @@ import com.rizkynova.mybio.R;
 public class SliderAdapter extends PagerAdapter {
  Context context;
  LayoutInflater layoutInflater;
-
+    public static final String COMPLETED_ONBOARDING_PREF_NAME = "Onboarding Completed";
  public SliderAdapter(Context context){
      this.context = context;
  }
