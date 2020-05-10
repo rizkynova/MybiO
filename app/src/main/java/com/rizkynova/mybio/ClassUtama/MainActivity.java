@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                mNextBtn.setText("Next");
                mBackBtn.setText("");
            }else if(position==mDots.length - 1){
-               animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.bottom_anim);
+               animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.side_anim);
                mGetStarted.setAnimation(animation);
                mNextBtn.setEnabled(false);
                mBackBtn.setEnabled(true);

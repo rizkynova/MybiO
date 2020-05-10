@@ -6,20 +6,37 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.rizkynova.mybio.R;
 
+import org.w3c.dom.Text;
+
 public class Home extends AppCompatActivity {
-
-
+    private Animation animation;
+    TextView txtHelp,txtBodyHelp;
+    ImageView img;
+    Button btnContact;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         BottomNavigationView bottomNavigationView =findViewById(R.id.bot_nav);
         bottomNavigationView.setSelectedItemId(R.id.nav_home);
-
+        animation = AnimationUtils.loadAnimation(Home.this,R.anim.bottom_anim);
+        img = findViewById(R.id.imgHelp);
+        txtHelp = findViewById(R.id.textHelp);
+        txtBodyHelp = findViewById(R.id.textBodyHelp);
+        btnContact = findViewById(R.id.btnContact);
+        txtBodyHelp.setAnimation(animation);
+        btnContact.setAnimation(animation);
+        txtHelp.setAnimation(animation);
+        img.setAnimation(animation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
