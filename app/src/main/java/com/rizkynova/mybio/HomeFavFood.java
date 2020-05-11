@@ -16,56 +16,56 @@ import com.rizkynova.mybio.ClassUtama.Home;
 import com.rizkynova.mybio.ClassUtama.Music;
 import com.rizkynova.mybio.ClassUtama.Profile;
 
-public class HomeAbout extends AppCompatActivity {
-Button mBtnFavFood,mBtnHobby;
+public class HomeFavFood extends AppCompatActivity {
+Button mBtnAbout,mBtnInterest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_about);
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bot_nav);
+        setContentView(R.layout.activity_home_fav_food);
+        mBtnAbout = findViewById(R.id.btnAbout);
+        mBtnInterest = findViewById(R.id.btnHobby);
+        BottomNavigationView bottomNavigationView =findViewById(R.id.bot_nav);
         bottomNavigationView.setSelectedItemId(R.id.nav_home);
-        mBtnFavFood = findViewById(R.id.btnFavFood);
-        mBtnHobby = findViewById(R.id.btnHobby);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
+                switch (item.getItemId()){
                     case R.id.nav_home:
                         startActivity(new Intent(getApplicationContext(), Home.class));
-                        overridePendingTransition(0, 0);
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_daily:
                         startActivity(new Intent(getApplicationContext(), DailyActivity.class));
-                        overridePendingTransition(0, 0);
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_gallery:
                         startActivity(new Intent(getApplicationContext(), Gallery.class));
-                        overridePendingTransition(0, 0);
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_music:
                         startActivity(new Intent(getApplicationContext(), Music.class));
-                        overridePendingTransition(0, 0);
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_profile:
                         startActivity(new Intent(getApplicationContext(), Profile.class));
-                        overridePendingTransition(0, 0);
+                        overridePendingTransition(0,0);
                         return true;
                 }
                 return false;
             }
         });
-        mBtnFavFood.setOnClickListener(new View.OnClickListener() {
+        mBtnAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(HomeAbout.this, HomeFavFood.class);
+                Intent i = new Intent(HomeFavFood.this,HomeAbout.class);
                 startActivity(i);
                 finish();
             }
         });
-        mBtnHobby.setOnClickListener(new View.OnClickListener() {
+        mBtnInterest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(HomeAbout.this,HomeInterest.class);
+                Intent i = new Intent(HomeFavFood.this,HomeInterest.class);
                 startActivity(i);
                 finish();
             }

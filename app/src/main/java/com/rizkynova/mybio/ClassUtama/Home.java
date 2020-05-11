@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -13,6 +14,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.rizkynova.mybio.HomeAbout;
+import com.rizkynova.mybio.HomeFavFood;
+import com.rizkynova.mybio.HomeInterest;
 import com.rizkynova.mybio.R;
 
 import org.w3c.dom.Text;
@@ -21,7 +25,7 @@ public class Home extends AppCompatActivity {
     private Animation animation;
     TextView txtHelp,txtBodyHelp;
     ImageView img;
-    Button btnContact;
+    Button btnContact,mBtnAbout,mBtnHobby,mBtnFavFood;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +35,9 @@ public class Home extends AppCompatActivity {
         animation = AnimationUtils.loadAnimation(Home.this,R.anim.bottom_anim);
         img = findViewById(R.id.imgHelp);
         txtHelp = findViewById(R.id.textHelp);
+        mBtnAbout = findViewById(R.id.btnAbout);
+        mBtnHobby = findViewById(R.id.btnHobby);
+        mBtnFavFood = findViewById(R.id.btnFavFood);
         txtBodyHelp = findViewById(R.id.textBodyHelp);
         btnContact = findViewById(R.id.btnContact);
         txtBodyHelp.setAnimation(animation);
@@ -63,6 +70,31 @@ public class Home extends AppCompatActivity {
                         return true;
                 }
                 return false;
+            }
+        });
+
+        mBtnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Home.this, HomeAbout.class);
+                startActivity(i);
+                finish();
+            }
+        });
+        mBtnFavFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent j = new Intent(Home.this, HomeFavFood.class);
+                startActivity(j);
+                finish();
+            }
+        });
+        mBtnHobby.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent k = new Intent(Home.this, HomeInterest.class);
+                startActivity(k);
+                finish();
             }
         });
     }
