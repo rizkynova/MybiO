@@ -34,17 +34,7 @@ public class Gallery extends AppCompatActivity {
 
 
         adapter = new StaggeredRecyclerAdapter(this,lst);
-        staggeredRv.setAdapter(adapter);lst.add(new row(R.drawable.image1));
-        lst.add(new row(R.drawable.image2));
-        lst.add(new row(R.drawable.image3));
-        lst.add(new row(R.drawable.image4));
-        lst.add(new row(R.drawable.image5));
-        lst.add(new row(R.drawable.image6));
-        lst.add(new row(R.drawable.image7));
-        lst.add(new row(R.drawable.image8));
-        lst.add(new row(R.drawable.image9));
-        lst.add(new row(R.drawable.image10));
-        lst.add(new row(R.drawable.image11));
+        staggeredRv.setAdapter(adapter);
         lst.add(new row(R.drawable.image1));
         lst.add(new row(R.drawable.image2));
         lst.add(new row(R.drawable.image3));
@@ -55,7 +45,6 @@ public class Gallery extends AppCompatActivity {
         lst.add(new row(R.drawable.image8));
         lst.add(new row(R.drawable.image9));
         lst.add(new row(R.drawable.image10));
-        lst.add(new row(R.drawable.image11));
 
 
 

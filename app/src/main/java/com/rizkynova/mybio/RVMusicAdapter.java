@@ -1,4 +1,4 @@
-package com.rizkynova.mybio.ClassPendukung;
+package com.rizkynova.mybio;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,32 +12,30 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.rizkynova.mybio.R;
 
 import java.util.List;
 
-public class RVAdapter extends RecyclerView.Adapter<RVAdapter.RViewHolder> {
-
+public class RVMusicAdapter extends RecyclerView.Adapter<com.rizkynova.mybio.RVMusicAdapter.MusicRViewHolder> {
     Context mContext;
-    List<RV> mData;
+    List<RVMusic> mData;
 
-    public RVAdapter(Context mContext, List<RV> mData) {
+    public RVMusicAdapter(Context mContext, List<RVMusic> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
 
     @NonNull
     @Override
-    public RViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RVMusicAdapter.MusicRViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View layout;
-        layout = LayoutInflater.from(mContext).inflate(R.layout.items_rv,parent,false);
+        layout = LayoutInflater.from(mContext).inflate(R.layout.music_item_rv,parent,false);
 
-        return new RViewHolder(layout);
+        return new MusicRViewHolder(layout);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RVMusicAdapter.MusicRViewHolder holder, int position) {
 
         //bind datanya disini
 
@@ -59,13 +57,13 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.RViewHolder> {
         return mData.size();
     }
 
-    public static class RViewHolder extends RecyclerView.ViewHolder{
+    public class MusicRViewHolder extends RecyclerView.ViewHolder{
 
         TextView textTitle,textContent,textDesc,textDate;
         ImageView img_user;
         RelativeLayout relativeLayout;
 
-        public RViewHolder(View itemView){
+        public MusicRViewHolder(View itemView){
             super(itemView);
             relativeLayout = itemView.findViewById(R.id.relativeLayout);
             textTitle = itemView.findViewById(R.id.textTitle);
@@ -76,3 +74,4 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.RViewHolder> {
 
     }
 }
+

@@ -2,20 +2,48 @@ package com.rizkynova.mybio.ClassUtama;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.rizkynova.mybio.ClassPendukung.RV;
+import com.rizkynova.mybio.ClassPendukung.RVAdapter;
 import com.rizkynova.mybio.R;
+import com.rizkynova.mybio.RVMusic;
+import com.rizkynova.mybio.RVMusicAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Music extends AppCompatActivity {
-
+    RecyclerView rvcoy;
+    RVMusicAdapter rvMusicAdapter;
+    List<RVMusic> mData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
+
+        //inisiasi viewnya disini
+        rvcoy = findViewById(R.id.rv);
+        mData = new ArrayList<>();
+        //ini isinya tinggal tambah kalo butuh banyak
+        mData.add(new RVMusic("With ear to see and eye to hear","Sleeping With Sirens","2 May 2020",R.drawable.ic_music));
+        mData.add(new RVMusic("With ear to see and eye to hear","Sleeping With Sirens","2 May 2020",R.drawable.ic_music));
+        mData.add(new RVMusic("With ear to see and eye to hear","Sleeping With Sirens","2 May 2020",R.drawable.ic_music));
+        mData.add(new RVMusic("With ear to see and eye to hear","Sleeping With Sirens","2 May 2020",R.drawable.ic_music));
+        mData.add(new RVMusic("With ear to see and eye to hear","Sleeping With Sirens","2 May 2020",R.drawable.ic_music));
+        mData.add(new RVMusic("With ear to see and eye to hear","Sleeping With Sirens","2 May 2020",R.drawable.ic_music));
+       // inisiasi adapternya sekalian setup si adapternya
+        rvMusicAdapter = new RVMusicAdapter(this,mData);
+        rvcoy.setAdapter(rvMusicAdapter);
+        rvcoy.setLayoutManager(new LinearLayoutManager(this));
+
+
         BottomNavigationView bottomNavigationView =findViewById(R.id.bot_nav);
         bottomNavigationView.setSelectedItemId(R.id.nav_music);
 

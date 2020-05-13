@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -30,6 +31,7 @@ public class StaggeredRecyclerAdapter extends RecyclerView.Adapter<StaggeredRecy
 
     @Override
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
+        holder.img.setAnimation(AnimationUtils.loadAnimation(mContext,R.anim.fade_transition));
         holder.img.setImageResource(mdata.get(position).getImg());
     }
 

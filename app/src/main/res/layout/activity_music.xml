@@ -8,18 +8,29 @@
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:background="#FFFFFF"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_navigation"
-        android:id="@+id/bot_nav"/>
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    app:menu="@menu/bottom_navigation"
+    android:id="@+id/bot_nav"/>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_centerInParent="true"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bot_nav" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
         android:layout_height="wrap_content"
-        android:text="Music" />
+        android:layout_above="@id/bot_nav"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        app:srcCompat="@drawable/friend" />
 
 </RelativeLayout>

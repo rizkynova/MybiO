@@ -1,13 +1,12 @@
-package com.rizkynova.mybio.ClassPendukung;
+package com.rizkynova.mybio;
 
-public class RV {
-
+public class RVMusic {
     String Title,Content,Date;
     int userPhoto;
 
 
 
-    public RV(String title, String content, String date, int userPhoto) {
+    public RVMusic(String title, String content, String date, int userPhoto) {
         Title = title;
         Content = content;
         Date = date;
