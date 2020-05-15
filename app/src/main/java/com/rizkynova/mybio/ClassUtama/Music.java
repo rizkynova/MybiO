@@ -32,12 +32,15 @@ public class Music extends AppCompatActivity {
         rvcoy = findViewById(R.id.rv);
         mData = new ArrayList<>();
         //ini isinya tinggal tambah kalo butuh banyak
-        mData.add(new RVMusic("With ear to see and eye to hear","Sleeping With Sirens","2 May 2020",R.drawable.ic_music));
-        mData.add(new RVMusic("With ear to see and eye to hear","Sleeping With Sirens","2 May 2020",R.drawable.ic_music));
-        mData.add(new RVMusic("With ear to see and eye to hear","Sleeping With Sirens","2 May 2020",R.drawable.ic_music));
-        mData.add(new RVMusic("With ear to see and eye to hear","Sleeping With Sirens","2 May 2020",R.drawable.ic_music));
-        mData.add(new RVMusic("With ear to see and eye to hear","Sleeping With Sirens","2 May 2020",R.drawable.ic_music));
-        mData.add(new RVMusic("With ear to see and eye to hear","Sleeping With Sirens","2 May 2020",R.drawable.ic_music));
+        mData.add(new RVMusic("With ear to see and eye to hear","Sleeping With Sirens","2 May 2020",R.drawable.sws));
+        mData.add(new RVMusic("Iris","Sleeping With Sirens","2 May 2020",R.drawable.sws));
+        mData.add(new RVMusic("Roger Rabbit","Sleeping With Sirens","2 May 2020",R.drawable.sws));
+        mData.add(new RVMusic("If i'm James Dean, You're Audrey Hepburn","Sleeping With Sirens","2 May 2020",R.drawable.sws));
+        mData.add(new RVMusic("Kick Me","Sleeping With Sirens","2 May 2020",R.drawable.sws));
+        mData.add(new RVMusic("Do it now! Remember it Later!","Sleeping With Sirens","2 May 2020",R.drawable.sws));
+        mData.add(new RVMusic("Cancer","My Chemical Romance","2 May 2020",R.drawable.mcr));
+        mData.add(new RVMusic("Helena","My Chemical Romance","2 May 2020",R.drawable.mcr));
+        mData.add(new RVMusic("Welcome to Black Parade","My Chemical Romance","2 May 2020",R.drawable.mcr));
        // inisiasi adapternya sekalian setup si adapternya
         rvMusicAdapter = new RVMusicAdapter(this,mData);
         rvcoy.setAdapter(rvMusicAdapter);

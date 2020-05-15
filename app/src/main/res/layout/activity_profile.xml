@@ -14,12 +14,141 @@
         app:menu="@menu/bottom_navigation"
         android:id="@+id/bot_nav"/>
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="540dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-45dp"
+        app:srcCompat="@drawable/sd" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        app:srcCompat="@drawable/rizkynova" />
+
     <TextView
         android:id="@+id/textView"
-        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profile" />
+        android:layout_below="@id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Rizky Novayandi"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_ab"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/amiko_semibold"
+        android:text="profile"
+        android:textColor="#fff"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/ic_dd"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_centerHorizontal="true"
+        android:text="UX/UX Mobile Designer"
+        android:textColor="#AEFFFFFF" />
+
+    <ImageButton
+        android:id="@+id/btnInstagram"
+        android:layout_width="68dp"
+        android:layout_height="73dp"
+        android:layout_below="@id/textView6"
+        android:layout_alignLeft="@id/btnTwitter"
+        android:layout_marginLeft="-60dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@android:color/transparent"
+        app:srcCompat="@drawable/ic_instagram"
+        tools:ignore="VectorDrawableCompat" />
+    <ImageButton
+        android:id="@+id/btnTwitter"
+        android:layout_width="68dp"
+        android:layout_height="73dp"
+        android:layout_below="@id/textView6"
+        android:layout_alignLeft="@id/btnLocation"
+        android:layout_marginLeft="-60dp"
+        android:layout_marginTop="33dp"
+        android:backgroundTint="@android:color/transparent"
+        app:srcCompat="@drawable/ic_twitter"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/btnLocation"
+        android:layout_width="68dp"
+        android:layout_height="73dp"
+        android:layout_below="@id/textView6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:backgroundTint="@android:color/transparent"
+        app:srcCompat="@drawable/ic_location"
+        tools:ignore="VectorDrawableCompat" />
+    <ImageButton
+        android:id="@+id/btnGoogle"
+        android:layout_width="68dp"
+        android:layout_height="73dp"
+        android:layout_below="@id/textView6"
+        android:layout_alignRight="@id/btnLocation"
+        android:layout_marginRight="-60dp"
+        android:layout_marginTop="33dp"
+        android:backgroundTint="@android:color/transparent"
+        app:srcCompat="@drawable/ic_gmail"
+        tools:ignore="VectorDrawableCompat" />
+    <ImageButton
+        android:id="@+id/btnWhatsapp"
+        android:layout_width="68dp"
+        android:layout_height="73dp"
+        android:layout_below="@id/textView6"
+        android:layout_alignRight="@id/btnGoogle"
+        android:layout_marginRight="-60dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@android:color/transparent"
+        app:srcCompat="@drawable/ic_whatsapp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <Button
+        android:id="@+id/btnVersion"
+        android:layout_width="300dp"
+        android:layout_marginTop="60dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLocation"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded"
+        android:text="VERSION"
+
+
+        android:textColor="#FFF" />
 
 
 </RelativeLayout>

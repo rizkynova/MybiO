@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFF"
     tools:context=".ClassUtama.DailyActivity">
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:background="#FFFFFF"
@@ -19,7 +20,8 @@
         android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bot_nav" />
+        android:layout_above="@id/bot_nav"
+        android:layout_marginTop="-5dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
