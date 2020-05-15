@@ -1,4 +1,10 @@
 package com.rizkynova.mybio.ClassUtama;
+/*
+Nama  : Rizky Novayandi
+Kelas : IF4
+NIM   : 10117140
+Waktu Pengerjaan SplashScreen : 11 Mei 2020 12:24 WIB
+*/
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
